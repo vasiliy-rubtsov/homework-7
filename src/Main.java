@@ -5,12 +5,14 @@ public class Main {
         // Задача 1
         System.out.println("Задача 1");
         {
-            int total = 0;
             int deposit = 15000;
+            float total = (float) deposit;
             int i = 0;
+            int percent = 1; // Процент по вкладу за месяц
 
             while (total < 2_459_000) {
                 i++;
+                total += total * percent / 100;
                 total += deposit;
                 System.out.println("Месяц " + i + ", сумма накоплений равна " + total + " рублей");
             }
@@ -42,9 +44,12 @@ public class Main {
         System.out.println("Задача 3");
         {
             int total = 12_000;
+            int bornProp = 17; // Рождамеость, на 1000 человек в год
+            int deathProp = 8; // Смертность, на 1000 человек в год
+            int totalProp = bornProp - deathProp; // Процент прироста населения, на 1000 человек в год
 
             for (int i = 1; i <=10; i++) {
-                total += total * (17 - 8) / 1000;
+                total += total * totalProp / 1000;
                 System.out.println("Год " + i + ", численность населения составляет " + total);
             }
         }
