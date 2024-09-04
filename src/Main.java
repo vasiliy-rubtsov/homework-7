@@ -6,9 +6,10 @@ public class Main {
         System.out.println("Задача 1");
         {
             int deposit = 15000;
-            float total = (float) deposit;
-            int i = 0;
             int percent = 1; // Процент по вкладу за месяц
+
+            int i = 0;
+            float total = (float) deposit; // положили начальный вклад
 
             while (total < 2_459_000) {
                 i++;
